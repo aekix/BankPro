@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello VideoController!{% endblock %}
+
+{% block body %}
+    {% if is_granted('IS_AUTHENTICATED_FULLY') == false %}
+        <br>
+        <a href="{{ path('register') }}">register</a>
+    {% endif %}
+{% endblock %}

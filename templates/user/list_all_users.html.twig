@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello VideoController!{% endblock %}
+
+{% block body %}
+    {% for user in users %}
+        Identifiant : {{ user.firstname}}
+
+    {% endfor %}
+    {{ users|json_encode }}
+{% endblock %}
